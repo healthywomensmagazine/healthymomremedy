@@ -1,5 +1,5 @@
 exports.handler = async event => {
-  if (event.headers.referer.includes('pinterest')) {
+  if (event.headers['pinterest']) {
     return {
       statusCode: 301,
       headers: {
