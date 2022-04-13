@@ -1,18 +1,17 @@
 exports.handler = async event => {
-  if (event.headers.referer.includes('pinterest.com')) {
+  if (event.headers.referer.includes('facebook')) {
     return {
       statusCode: 301,
       headers: {
-        'cache-control': 'public, max-age=0, must-revalidate',
-        location: decodeURIComponent(event.queryStringParameters.url)
+        location: 'https://www.google.com/'
       }
     }
   } else {
+    let pathName = location.pathname.split('/')[2].split('-')
     return {
       statusCode: 301,
       headers: {
-        'cache-control': 'public, max-age=0, must-revalidate',
-        location: process.env.URL + '/' + decodeURIComponent(event.queryStringParameters.url).split('/')[3] + '/'
+        location: process.env.URL + pathName[0] + '/' + pathName[1]
       }
     }
   }
