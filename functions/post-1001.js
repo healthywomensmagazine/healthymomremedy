@@ -1,5 +1,4 @@
 exports.handler = async event => {
-if (event.headers.referer('pinterest')) {
- // process the function
+if (ref.match(/^https?:\/\/([^\/]+\.)?facebook\.com(\/|$)/i)) {
 }
 }
