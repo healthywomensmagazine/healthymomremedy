@@ -3,7 +3,7 @@ exports.handler = async event => {
     return {
       statusCode: 301,
       headers: {
-        location: 'https://www.google.com/'
+        location: process.env.URL + pathName[0] + '/' + pathName[1]
       }
     }
   } else {
