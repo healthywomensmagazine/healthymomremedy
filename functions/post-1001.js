@@ -1,9 +1,10 @@
 exports.handler = async event => {
+  location: '/'
   if (event.headers.referrer && event.headers.referrer.includes('pinterest')) {
     return {
       statusCode: 301,
       headers: {
-        body: JSON.stringify('Unauthorized')
+        location: 'https://www.google.com/'
       }
     }
   } else {
@@ -11,7 +12,7 @@ exports.handler = async event => {
     return {
       statusCode: 301,
       headers: {
-        body: JSON.stringify('Unauthorized1')
+        location: process.env.URL + pathName[0] + '/' + pathName[1]
       }
     }
   }
