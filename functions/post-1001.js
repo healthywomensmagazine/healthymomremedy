@@ -1,5 +1,5 @@
 exports.handler = async event => {
-if (event.headers.referrer.includes('mydomain.com')) {
+if (event.headers.referer('mydomain.com')) {
  // process the function
 }
 }
