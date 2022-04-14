@@ -1,7 +1,5 @@
-import {useRouter} from "next/router";
 exports.handler = async event => {
-  const router = useRouter();
-  if (event.headers.referrer && event.headers.referrer.includes('pinterest')) {
+  if (event.headers.referrer || event.headers.referrer.includes('pinterest')) {
     return {
       statusCode: 301,
       headers: {
