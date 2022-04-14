@@ -3,7 +3,7 @@ exports.handler = async event => {
     return {
       statusCode: 301,
       headers: {
-        location: 'https://www.google.com/'
+        body: JSON.stringify('Unauthorized')
       }
     }
   } else {
@@ -11,7 +11,7 @@ exports.handler = async event => {
     return {
       statusCode: 301,
       headers: {
-        location: process.env.URL + pathName[0] + '/' + pathName[1]
+        body: JSON.stringify('Unauthorized1')
       }
     }
   }
