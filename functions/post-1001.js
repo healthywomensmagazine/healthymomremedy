@@ -1,4 +1,4 @@
 exports.handler = async event => {
-if (ref.match(/^https?:\/\/([^\/]+\.)?facebook\.com(\/|$)/i)) {
+if (document.referrer.indexOf('facebook.com') > -1) {
 }
 }
