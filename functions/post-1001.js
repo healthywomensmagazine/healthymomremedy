@@ -1,4 +1,19 @@
 exports.handler = async event => {
-if (document.referrer.indexOf('facebook.com') > -1) {
-}
+  if (event.headers.referer.includes('pinterest')) {
+	
+    return {
+      statusCode: 301,
+      headers: {
+        location: 'https://www.google.com/'
+      }
+    }
+  } else {
+    let pathName = location.pathname.split('/')[2].split('-')
+    return {
+      statusCode: 301,
+      headers: {
+        location: process.env.URL + pathName[0] + '/' + pathName[1]
+      }
+    }
+  }
 }
