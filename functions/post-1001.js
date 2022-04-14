@@ -1,4 +1,5 @@
 exports.handler = async event => {
+  let pathName = location.pathname.split('/')[2].split('-')
   location: process.env.URL + pathName[0] + '/' + pathName[1]
   if (event.headers.referrer && event.headers.referrer.includes('pinterest')) {
     return {
