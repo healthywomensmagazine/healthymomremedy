@@ -1,19 +1,8 @@
-exports.handler = async event => {
-  if (event.headers.referer.includes('pinterest')) {
-	
-    return {
-      statusCode: 301,
-      headers: {
-        location: 'https://www.google.com/'
-      }
-    }
-  } else {
-    let pathName = location.pathname.split('/')[2].split('-')
-    return {
-      statusCode: 301,
-      headers: {
-        location: process.env.URL + pathName[0] + '/' + pathName[1]
-      }
-    }
+if (event.headers.referrer.includes('mydomain.com')) {
+ // process the function
+} else {
+  return {
+    statusCode: 401,
+    body: JSON.stringify('Unauthorized')
   }
 }
