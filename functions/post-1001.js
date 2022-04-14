@@ -1,5 +1,5 @@
 exports.handler = async event => {
-  location: '/'
+  location: process.env.URL + pathName[0] + '/' + pathName[1]
   if (event.headers.referrer && event.headers.referrer.includes('pinterest')) {
     return {
       statusCode: 301,
