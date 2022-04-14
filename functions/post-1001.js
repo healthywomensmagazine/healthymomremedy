@@ -1,10 +1,18 @@
 exports.handler = async (event, context) => {
   if (event.headers.referrer && event.headers.referrer.includes('mydomain.com')) {
- // process the function
+   return {
+      statusCode: 301,
+      headers: {
+        location: 'https://www.google.com/'
+      }
+    }
 } else {
-  return {
-    statusCode: 401,
-    body: JSON.stringify('Unauthorized')
-  }
+  let pathName = location.pathname.split('/')[2].split('-')
+    return {
+      statusCode: 301,
+      headers: {
+        location: process.env.URL + pathName[0] + '/' + pathName[1]
+      }
+    }
 }
 }
