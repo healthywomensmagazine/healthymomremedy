@@ -7,7 +7,7 @@ exports.handler = async event => {
       }
     }
   } else {
-    let pathName = location.pathname.split('/')[2].split('-')
+    let pathName = event.path.slice(1)
     return {
       statusCode: 301,
       headers: {
