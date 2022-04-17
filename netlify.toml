@@ -9,4 +9,4 @@
   querty = { lang = ":lang" }
 
 [functions.post]
-    included_files = ["posts/*.md"]
+    included_files = ["post/*.md"]
