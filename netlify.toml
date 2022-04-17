@@ -7,3 +7,6 @@
   status = 200
   force = false
   querty = { lang = ":lang" }
+
+[functions.post]
+    included_files = ["posts/*.md"]
