@@ -1,2 +1,9 @@
 [functions]
   directory = "functions"
+
+[[redirects]]
+  from = "/post/*"
+  to = "/.netlify/functions/post"
+  status = 200
+  force = false
+  querty = { lang = ":lang" }
