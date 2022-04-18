@@ -12,5 +12,12 @@
   force = false
   querty = { lang = ":lang" }
 
+[functions]
+  directory = "functions"
+  node_bundler = "esbuild"
+
 [functions.post]
     included_files = ["post/*.md"]
+
+[dev]
+  autoLaunch = false
