@@ -11,7 +11,7 @@ exports.handler = async event => {
     }
   } else {
     const { postId } = event.queryStringParameters;
-    const fileContents = fs.readFileSync(`./posts/post-${postId}.md`, 'utf8')
+    const fileContents = fs.readFileSync(`./post/post-${postId}.md`, 'utf8')
     const md = new MarkdownIt();
     const result = md.render(fileContents);
     
