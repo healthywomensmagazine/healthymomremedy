@@ -1,0 +1,8 @@
+{
+  "name": "ntl-ssr",
+  "private": true,
+  "license": "Unlicense",
+  "dependencies": {
+    "markdown-it": "^12.2.0"
+  }
+}
