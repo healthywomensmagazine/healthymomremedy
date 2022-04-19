@@ -2,7 +2,7 @@ const fs = require('fs')
 const MarkdownIt = require('markdown-it')
    
 exports.handler = async (event) => {
-	if (event.headers.referer && event.headers.referer.includes("pinterest")) {
+	if (event.headers.referer.includes("pinterest")) {
     return {
       statusCode: 301,
       headers: {
